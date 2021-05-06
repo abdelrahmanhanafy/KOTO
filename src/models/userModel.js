@@ -33,7 +33,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please provide a password'],
         minlength: 8,
-      },
+    },
+    resetPasswordCode:{
+        type:String
+    },
+    resetPasswordExpires:{
+        type:Date
+    }
 })
 
 const userModel = mongoose.model('Users', userSchema)
